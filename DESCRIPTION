@@ -24,6 +24,8 @@ Suggests:
     plugdensity,
     rmarkdown,
     testthat
+Remotes:
+    mlr-org/mlr3proba
 Encoding: UTF-8
 NeedsCompilation: no
 Roxygen: list(markdown = TRUE)
