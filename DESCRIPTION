@@ -1,6 +1,6 @@
 Package: mlr3learners.plugdensity
 Title: Learners from the {plugdensity} package for 'mlr3'
-Version: 0.1.0
+Version: 0.1.0.9000
 Authors@R:
     person(given = "Raphael",
            family = "Sonabend",
