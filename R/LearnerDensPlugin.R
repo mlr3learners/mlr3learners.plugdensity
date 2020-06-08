@@ -57,7 +57,7 @@ LearnerDensPlugin = R6Class("LearnerDensPlugin",
     },
 
     .predict = function(task) {
-      PredictionDens$new(task = task, pdf = self$model$pdf(task$truth()))
+      mlr3proba::PredictionDens$new(task = task, pdf = self$model$pdf(task$truth()))
     }
   )
 )
