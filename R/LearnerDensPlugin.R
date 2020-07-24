@@ -45,15 +45,16 @@ LearnerDensPlugin = R6Class("LearnerDensPlugin",
 
   private = list(
     .train = function(task) {
-      pdf <- function(x1) {} # nolint
+      pdf <- function(x) {} # nolint
       body(pdf) <- substitute({
-        mlr3misc::invoke(plugdensity::plugin.density, x = data, xout = x1, na.rm = TRUE)$y
+        mlr3misc::invoke(plugdensity::plugin.density, x = data, xout = x, na.rm = TRUE)$y
       }, list(data = task$truth()))
 
       distr6::Distribution$new(
         name = "Plugin KDE",
         short_name = "PluginKDE",
-        pdf = pdf)
+        pdf = pdf,
+        type = set6::Reals$new())
     },
 
     .predict = function(task) {
